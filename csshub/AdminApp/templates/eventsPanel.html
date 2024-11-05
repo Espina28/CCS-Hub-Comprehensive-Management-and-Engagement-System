@@ -1,0 +1,249 @@
+{% load static %}
+{% include 'partials/head.html'%}
+
+  <body>
+    <div class="container-fluid px-0">
+      <nav class="navbar bg-black">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <div>
+              <a class="me-3 navbar-brand" href="#">
+                <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png' %}" alt="Logo" width="50" height="50">
+              </a>
+            </div>
+            <div class="justify-content-center align-items-center fs-5 ">
+              <a class="title text-white fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+            </div>
+          </div>
+          <div>
+            <a class="text-decoration-none text-white me-5 fs-6" href="./login.html">
+              LogIn as Member 
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+
+            <!-- EDIT Modal -->
+            <div class="modal fade" id="editform" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark text-light">
+                  <div class="modal-header ">
+                    <div class="d-flex align-items-center">
+                      <div>
+                        <a class="me-3 navbar-brand" href="#">
+                          <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png' %}" alt="Logo" width="50" height="50">
+                        </a>
+                      </div>
+                      <div class="justify-content-center align-items-center fs-5 ">
+                        <a class="title text-light fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-dark d-flex flex-column">
+                    <form action="">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventNameInput" placeholder="Name">
+                        <label for="EventNameInput">Event Name</label>
+                      </div>
+                      <div class="mb-3">
+                        <textarea class="form-control" id="EventDiscription" rows="5" placeholder="Description"></textarea>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="EventPictureInput">
+                        <label class="input-group-text" for="EventPictureInput">Upload</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="EventDate" placeholder="Event Location">
+                        <label for="EventLocationInput">Event Date</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventLocationInput" placeholder="Event Location">
+                        <label for="EventLocationInput">Event Location</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventFeeInput" placeholder="Event Fee">
+                        <label for="EventFeeInput">Event Fee</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventDiscountInput" placeholder="Event Discount">
+                        <label for="EventDiscountInput">Event Discount</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventCreator" placeholder="Student Id Number">
+                        <label for="EventCreator">Event Creator</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventStatus" placeholder="Event Status">
+                        <label for="EventStatus">Event Status</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">SAVE</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CREATE Modal -->
+            <div class="modal fade" id="createfrom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark text-light">
+                  <div class="modal-header ">
+                    <div class="d-flex align-items-center">
+                      <div>
+                        <a class="me-3 navbar-brand" href="#">
+                          <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png'%}" alt="Logo" width="50" height="50">
+                        </a>
+                      </div>
+                      <div class="justify-content-center align-items-center fs-5 ">
+                        <a class="title text-light fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-dark d-flex flex-column">
+                    <form action="">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventNameInput" placeholder="Name">
+                        <label for="EventNameInput">Event Name</label>
+                      </div>
+                      <div class="mb-3">
+                        <textarea class="form-control" id="EventDiscription" rows="5" placeholder="Description"></textarea>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="EventPictureInput">
+                        <label class="input-group-text" for="EventPictureInput">Upload</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="EventDate" placeholder="Event Location">
+                        <label for="EventLocationInput">Event Date</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventLocationInput" placeholder="Event Location">
+                        <label for="EventLocationInput">Event Location</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventFeeInput" placeholder="Event Fee">
+                        <label for="EventFeeInput">Event Fee</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventDiscountInput" placeholder="Event Discount">
+                        <label for="EventDiscountInput">Event Discount</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="EventCreator" placeholder="Student Id Number">
+                        <label for="EventCreator">Event Creator</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">SAVE</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!---->
+
+            <div class="p-0 col bg-light text-center">
+                <div class="px-4 my-5">
+                  <p class="h3">ADMIN DASHBOARD</p>
+                </div>
+                <div class="line bg-black"></div>
+                <div class="p-4">
+                  <div class="d-flex justify-content-center">
+                    <ul class="text-start">
+                      <li class="py-4">
+                        <a class="fs-4 text-dark" href="/control/user-panel">Users</a>
+                      </li>
+                      <li class="py-4">
+                        <a class="fs-4 text-dark" href="/control/events-dashboard">Events</a>
+                      </li>
+                      <li class="py-4">
+                        <a class="fs-4 text-dark" href="/control/user-request-panel">Request</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="col-7 px-0">
+              <section class="container d-flex row-gap-2 flex-column box vh-100">
+                <div class="post-entry d-flex bg-light flex-column rounded p-4">
+                  <div class="post-desc">
+                    <div class="d-flex">
+                        <div>
+                            <h5>
+                                Get Ready for your Midterm Exams with Object-Oriented Programming 1:
+                            </h5>
+                            <p class="fs-6 mt-4">
+                                𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬 𝐨𝐟 𝐎𝐎𝐏! Let tutor 𝐉𝐞𝐫𝐞𝐦𝐲 𝐁𝐫𝐚𝐝 𝐋𝐞𝐞 guide you through the key OOP principles every 
+                                second-year student needs. Build a strong foundation with Object-Oriented Programming and start
+                                your journey to success!
+                            </p>
+                        </div>
+                        <div>
+                            <p class="rounded py-2 px-5 bg-success text-white h6 ">FINISHED</p> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="post-img mt-3">
+                    <img class="" src="{%static '/assets/images/css.2.0.jpg'%}" width="100%" height="500px" alt="">
+                  </div>
+                  <div class="post-btn d-flex flex-row-reverse mt-4 gap-2">
+                    <button type="button" class="btn btn-warning text-light py-3 px-5"
+                    data-bs-target="#editform" data-bs-toggle="modal" >EDIT EVENT</button>
+                    <button type="button" class="btn btn-danger text-light py-3 px-5 ">DELETE EVENT</button>
+                  </div>                
+                </div>
+                <div class="post-entry d-flex bg-light flex-column rounded p-4">
+                    <div class="post-desc">
+                      <div class="d-flex">
+                          <div>
+                              <h5>
+                                  Get Ready for your Midterm Exams with Object-Oriented Programming 1:
+                              </h5>
+                              <p class="fs-6 mt-4">
+                                  𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬 𝐨𝐟 𝐎𝐎𝐏! Let tutor 𝐉𝐞𝐫𝐞𝐦𝐲 𝐁𝐫𝐚𝐝 𝐋𝐞𝐞 guide you through the key OOP principles every 
+                                  second-year student needs. Build a strong foundation with Object-Oriented Programming and start
+                                  your journey to success!
+                              </p>
+                          </div>
+                          <div>
+                              <p class="rounded py-2 px-5 bg-success text-white h6 ">FINISHED</p> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="post-img mt-3">
+                      <img class="" src="{%static '/assets/images/css.2.0.jpg'%}" width="100%" height="500px" alt="">
+                    </div>
+                    <div class="post-btn d-flex flex-row-reverse mt-4 gap-2">
+                      <button type="button" class="btn btn-warning text-light py-3 px-5"
+                      data-bs-target="#editform" data-bs-toggle="modal" >EDIT EVENT</button>
+                      <button type="button" class="btn btn-danger text-light py-3 px-5 ">DELETE EVENT</button>
+                    </div>                
+                  </div>
+                
+              </section>
+            </div>
+            <div class="bg-light col text-center">
+                <div class="mt-4">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#createfrom"
+                     class="btn btn-warning px-4 py-3 fs-5">CREATE EVENT</button>
+                </div>
+            </div> 
+          </div>
+        </div>
+      </main>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

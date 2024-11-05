@@ -1,0 +1,176 @@
+{% load static %}
+{% include 'partials/head.html'%}
+
+  <body>
+    <div class="container-fluid px-0">
+      <nav class="navbar bg-black">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <div>
+              <a class="me-3 navbar-brand" href="#">
+                <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png'%}" alt="Logo" width="50" height="50">
+              </a>
+            </div>
+            <div class="justify-content-center align-items-center fs-5 ">
+              <a class="title text-white fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+            </div>
+          </div>
+          <div>
+            <a class="text-decoration-none text-white me-5 fs-6" href="./login.html">
+              LogIn as Member 
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="container-fluid">
+          <div class="row column-gap-2">
+            <!-- Modal -->
+            <div class="modal fade" id="form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark text-light">
+                  <div class="modal-header ">
+                    <div class="d-flex align-items-center">
+                      <div>
+                        <a class="me-3 navbar-brand" href="#">
+                          <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png'%}" alt="Logo" width="50" height="50">
+                        </a>
+                      </div>
+                      <div class="justify-content-center align-items-center fs-5 ">
+                        <a class="title text-light fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-dark d-flex flex-column">
+                    <form action="">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="NameInput" placeholder="Name">
+                        <label for="NameInput">Name</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="AddressInput" placeholder="Address">
+                        <label for="AddressInput">Address</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="ProgramInput" placeholder="Program">
+                        <label for="ProgramInput">Program</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="YearLevelInput" placeholder="Year Level">
+                        <label for="YearLevelInput">Year Level</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="StudentIdInput" placeholder="Student Id Number">
+                        <label for="StudentIdInput">Student Id Number</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CommitteeNameInput" placeholder="Committee Name">
+                        <label for="CommitteeNameInput">Committee Name</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CommitteePositionInput" placeholder="Committee Position">
+                        <label for="CommitteePositionInput">Committee Position</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InstitutionalEmailInput" placeholder="Institutional Email">
+                        <label for="InstitutionalEmailInput">Institutional Email</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="PasswordInput" placeholder="Password">
+                        <label for="PasswordInput">Password</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">SAVE</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">DEACTIVATE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="p-0 col bg-light text-center">
+                <div class="px-4 my-5">
+                  <p class="h3">ADMIN DASHBOARD</p>
+                </div>
+                <div class="line bg-black"></div>
+                <div class="p-4">
+                  <div class="d-flex justify-content-center">
+                    <ul class="text-start">
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/user-panel">Users</a>
+                        </li>
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/events-dashboard">Events</a>
+                        </li>
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/user-request-panel">Request</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="col-7 px-0">
+              <section class="container d-flex flex-column box vh-100 bg-light p-5 row-gap-2">
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button"  data-bs-target="#form" data-bs-toggle="modal" class="btn btn-warning text-light rounded-0 px-4 ">EDIT</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div><div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button"  data-bs-target="#form" data-bs-toggle="modal" class="btn btn-warning text-light rounded-0 px-4 ">EDIT</button>
+                        <button type="button" 
+                        class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button"  data-bs-target="#form" data-bs-toggle="modal" class="btn btn-warning text-light rounded-0 px-4 ">EDIT</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button"  data-bs-target="#form" data-bs-toggle="modal" class="btn btn-warning text-light rounded-0 px-4 ">EDIT</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button"  data-bs-target="#form" data-bs-toggle="modal" class="btn btn-warning text-light rounded-0 px-4 ">EDIT</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div>
+              </section>
+            </div>
+            <div class="bg-light col text-center">
+                <div class="mt-4">
+                    <!-- <button type="button" class="btn btn-warning px-4 py-3 fs-5">CREATE EVENT</button> -->
+                </div>
+            </div> 
+          </div>
+        </div>
+      </main>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

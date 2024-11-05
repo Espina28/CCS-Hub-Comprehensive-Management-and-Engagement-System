@@ -1,0 +1,179 @@
+{% load static %}
+{% include 'partials/head.html'%}
+
+  <body>
+    <div class="container-fluid px-0">
+      <nav class="navbar bg-black">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <div>
+              <a class="me-3 navbar-brand" href="#">
+                <img class="me-0" src="{%static '/assets/images/logo-css-removebg-preview.png'%}" alt="Logo" width="50" height="50">
+              </a>
+            </div>
+            <div class="justify-content-center align-items-center fs-5 ">
+              <a class="title text-white fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+            </div>
+          </div>
+          <div>
+            <a class="text-decoration-none text-white me-5 fs-6" href="./login.html">
+              LogIn as Member 
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="container-fluid">
+          <div class="row column-gap-2">
+            <div class="p-0 col bg-light text-center">
+                <div class="px-4 my-5">
+                  <p class="h3">ADMIN DASHBOARD</p>
+                </div>
+                <div class="line bg-black"></div>
+                <div class="p-4">
+                  <div class="d-flex justify-content-center">
+                    <ul class="text-start">
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/user-panel">Users</a>
+                        </li>
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/events-dashboard">Events</a>
+                        </li>
+                        <li class="py-4">
+                          <a class="fs-4 text-dark" href="/control/user-request-panel">Request</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="col-7 px-0">
+            <!-- Modal -->
+                <div class="modal fade" id="form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-light">
+                            <div class="modal-header ">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="me-3 navbar-brand" href="#">
+                                            <img class="me-0" src="{static '/assets/images/logo-css-removebg-preview.png'}" alt="Logo" width="50" height="50">
+                                        </a>
+                                    </div>
+                                    <div class="justify-content-center align-items-center fs-5 ">
+                                        <a class="title text-light fs-5 mb-0 navbar-brand" href="">Computer Student Society</a>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-white d-flex flex-column">
+                                <h5 class="mb-3">User Information</h5> <!-- Header for the displayed data -->
+                                <div class="mb-3">
+                                    <label for="Name">Name: </label>
+                                    <span id="NameValue">John Doe</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="AddressInput">Address: </label>
+                                    <span id="AddressValue">123 Main St, Cityville</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ProgramInput">Program: </label>
+                                    <span id="ProgramValue">Computer Science</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="YearLevelInput">Year Level: </label>
+                                    <span id="YearLevelValue">3rd Year</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="StudentIdInput">Student Id Number: </label>
+                                    <span id="StudentIdValue">S12345678</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="CommitteeNameInput">Committee Name: </label>
+                                    <span id="CommitteeNameValue">Event Organizing Committee</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="CommitteePositionInput">Committee Position: </label>
+                                    <span id="CommitteePositionValue">Chairperson</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="InstitutionalEmailInput">Institutional Email: </label>
+                                    <span id="InstitutionalEmailValue">johndoe@example.edu</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="PasswordInput">Password: </label>
+                                    <span id="PasswordValue">12345</span>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">BACK</button>
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">APPROVE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+              <section class="container d-flex flex-column box vh-100 bg-light p-5 row-gap-2">
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button" data-bs-target="#form" data-bs-toggle="modal"
+                        class="btn btn-primary text-light rounded-0 px-4 ">VIEW</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DENY</button>
+                      </div> 
+                    </div>
+                  </div><div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button" data-bs-target="#form" data-bs-toggle="modal"
+                        class="btn btn-primary text-light rounded-0 px-4 ">VIEW</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DENY</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button" data-bs-target="#form" data-bs-toggle="modal"
+                        class="btn btn-primary text-light rounded-0 px-4 ">VIEW</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DENY</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button" data-bs-target="#form" data-bs-toggle="modal"
+                        class="btn btn-primary text-light rounded-0 px-4 ">VIEW</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DENY</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="py-2 px-4 w-100 bg-secondary">
+                    <div class="d-flex flex-row w-100 py-2">
+                      <p class="fs-5 text-align-center my-0">Lorem ipsum dolor sit amet  </p>
+                      <div class="post-btn d-flex gap-2 ms-auto">
+                        <button type="button" data-bs-target="#form" data-bs-toggle="modal"
+                        class="btn btn-primary text-light rounded-0 px-4 ">VIEW</button>
+                        <button type="button" class="btn btn-danger text-light  rounded-0 px-4">DELETE</button>
+                      </div> 
+                    </div>
+                  </div>
+              </section>
+            </div>
+            <div class="bg-light col text-center">
+                <div class="mt-4">
+                    <!-- <button type="button" class="btn btn-warning px-4 py-3 fs-5">CREATE EVENT</button> -->
+                </div>
+            </div> 
+          </div>
+        </div>
+      </main>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html> 
