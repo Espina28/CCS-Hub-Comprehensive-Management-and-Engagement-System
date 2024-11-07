@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .models import Event
 
 # Create your views here.
+
 def eventsDashboard(request):
-    return render(request, "eventsPanel.html")
+    all_event = Event.objects.all()
+    return render(request, "eventsPanel.html", {"events": all_event})
 
 def userRequestPanel(request):
     return render(request, "requestPanel.html")
